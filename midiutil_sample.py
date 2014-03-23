@@ -31,6 +31,7 @@ volume = 255  # max 255
 MyMIDI.addNote(track,channel,pitch,time,duration,volume)
 
 for timer in xrange(10):
+	MyMIDI.addNote(track,channel,pitch+(timer),timer,duration,volume)
 	MyMIDI.addNote(track,channel,pitch+(2*timer),timer,duration,volume)
 	MyMIDI.addNote(track,channel,pitch-(2*timer),timer,duration,volume)
 
@@ -39,3 +40,5 @@ for timer in xrange(10):
 binfile = open("sample_output.mid", 'wb')
 MyMIDI.writeFile(binfile)
 binfile.close()
+
+# if __name__ == "__main__":
