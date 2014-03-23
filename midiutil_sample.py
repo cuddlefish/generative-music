@@ -4,8 +4,10 @@
 	# note that the generated file seems very quiet
 # ------------------------------------------------------------------------------
 
-#Import the library
+# import the library
 from midiutil.MidiFile import MIDIFile
+# import the small csv-reader module
+from read_csv import get_humidity
  
 # Create the MIDIFile Object with 1 track
 MyMIDI = MIDIFile(1)
